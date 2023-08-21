@@ -1,6 +1,7 @@
 # ML Knowledge Bank
+You can find most basic concepts at [Basic Stats Concepts](Applied_Stats.md); here we just supplement with information from *Machine Learning Yearning* 
 
-From *Machine Learning Yearning:* 
+---
 
 - **Precision**: the fraction of images in the dev set it labeled as cats that are really cats
 - **Recall**: percentage of all cat images in the dev set that it correctly labeled as a cat.
