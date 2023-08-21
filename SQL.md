@@ -1,5 +1,7 @@
 # SQL
 
+---
+
 If you use SQL day-in and day-out, you can skim this section. 
 
 Below notes are mostly from Mode Analytics (skim most, study window functions)
@@ -72,133 +74,8 @@ SUM(quantity) OVER (
 - always good to clarify how to handle ties (`rank` vs. `dense_rank` vs. `row_number`)
 - always good to clarify if we want to count(1) or count distinct
 
-Free practice problems: [https://leetcode.com/studyplan/top-sql-50/](https://leetcode.com/studyplan/top-sql-50/) 
-
-[https://github.com/mrinal1704/SQL-Leetcode-Challenge/tree/master/Hard](https://github.com/mrinal1704/SQL-Leetcode-Challenge/tree/master/Hard) 
-
-1. Example SQL Question:
-
-You have a table with 3 fields: Date, Impressions, Clicks. How would you set up a query to:
-
-- Measure the CTR over time?
-- Measure how CTR has grown year over year?
-- Identify the day of the week that most oen has the highest CTR?
-
-SQL练习题第二弹！
-Q1. Write an SQL query to fetch “FIRST_NAME” from Worker table using the alias name as <WORKER_NAME>.
-Ans.
-The required query is:
-Select FIRST_NAME AS WORKER_NAME from Worker;
-Q2. Write an SQL query to fetch “FIRST_NAME” from Worker table in upper case.
-Ans.
-The required query is:
-Select upper(FIRST_NAME) from Worker;
-Q3. Write an SQL query to fetch unique values of DEPARTMENT from Worker table.
-Ans.. ----
-The required query is:
-Select distinct DEPARTMENT from Worker;
-Q4. Write an SQL query to print the first three characters of FIRST_NAME from Worker table.
-Ans.. 1point 3acres
-The required query is:
-Select substring(FIRST_NAME,1,3) from Worker;
-Q5. Write an SQL query to find the position of the alphabet (‘a’) in the first name column ‘Amitabh’ from Worker table.
-Ans.
-The required query is:-baidu 1point3acres
-Select INSTR(FIRST_NAME, BINARY'a') from Worker where
-FIRST_NAME = 'Amitabh';. .и
-Notes.. [1point3acres.com](http://1point3acres.com/)
-• The INSTR method is in case-sensitive by default.
-• Using Binary operator will make INSTR work as the case-sensitive function.
-Q6. Write an SQL query to print the FIRST_NAME from Worker table after removing white spaces from the right side.
-Ans.. [1point3acres.com](http://1point3acres.com/)
-The required query is:. 1point 3 acres
-Select RTRIM(FIRST_NAME) from Worker;
-Q7. Write an SQL query to print the DEPARTMENT from Worker table after removing white spaces from the left side.
-Ans.
-The required query is:
-Select LTRIM(DEPARTMENT) from Worker;.1point3acres
-Q8. Write an SQL query that fetches the unique values of DEPARTMENT from Worker table and prints its length.
-Ans.
-The required query is:
-Select distinct length(DEPARTMENT) from Worker;
-Q9. Write an SQL query to print the FIRST_NAME from Worker table after replacing ‘a’ with ‘A’.
-Ans.. [1point3acres.com](http://1point3acres.com/)
-The required query is:
-Select REPLACE(FIRST_NAME,'a','A') from Worker;. 1point3acres
-Q10. Write an SQL query to print the FIRST_NAME and LAST_NAME from Worker table into a single column COMPLETE_NAME. A space char should separate them.
-Ans.
-The required query is:
-Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS
-'COMPLETE_NAME' from Worker;
-Q11. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending.
-Ans.
-The required query is:
-Select * from Worker order by FIRST_NAME asc;.--
-Q12. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending and DEPARTMENT Descending.
-Ans.
-The required query is:
-Select * from Worker order by FIRST_NAME asc,DEPARTMENT desc;
-Q13. Write an SQL query to print details for Workers with the first name as “Vipul” and “Satish” from Worker table.. Χ
-Ans.
-The required query is:
-Select * from Worker where FIRST_NAME in 
-
-('Vipul','Satish');. check 1point3acres for more.
-Q14. Write an SQL query to print details of workers excluding first names, “Vipul” and “Satish” from Worker table. ..
-Ans.
-The required query is:
-Select * from Worker where FIRST_NAME not in
-('Vipul','Satish');
-Q15. Write an SQL query to print details of Workers with DEPARTMENT name as “Admin”.
-Ans.
-The required query is:
-Select * from Worker where DEPARTMENT like 'Admin%';
-Q16. Write an SQL query to print details of the Workers whose FIRST_NAME contains ‘a’.
-Ans.
-The required query is:
-Select * from Worker where FIRST_NAME like '%a%';
-Q17. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘a’..--
-Ans.
-The required query is:
-Select * from Worker where FIRST_NAME like '%a';
-Q18. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
-Ans.
-The required query is:
-Select * from Worker where FIRST_NAME like '_____h';. Χ
-Q19. Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.
-Ans.
-The required query is:
-Select * from Worker where SALARY between 100000 and
-500000;
-Q20. Write an SQL query to print details of the Workers who have joined in Feb’2014.
-Ans.. Χ
-The required query is:
-Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;
-Q21. Write an SQL query to fetch the count of employees working in the department ‘Admin’.
-Ans.
-The required query is:
-SELECT COUNT(*) FROM worker WHERE DEPARTMENT = 'Admin';
-Q22. Write an SQL query to fetch worker names with salaries >= 50000 and <= 100000.
-Ans.
-The required query is:. From 1point 3acres bbs
-SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) As.1point3acres
-Worker_Name, Salary
-FROM worker. 1point 3acres
-WHERE WORKER_ID IN
-(SELECT WORKER_ID FROM worker
-WHERE Salary BETWEEN 50000 AND 100000);
-Q23. Write an SQL query to fetch the no. of workers for each department in the descending order.
-Ans.
-The required query is:. [1point3acres.com](http://1point3acres.com/)
-SELECT DEPARTMENT, count(WORKER_ID) No_Of_Workers
-FROM worker
-GROUP BY DEPARTMENT
-ORDER BY No_Of_Workers DESC;
-Q24. Write an SQL query to print details of the Workers who are also Managers.
-Ans.. 1point 3acres
-The required query is:
-SELECT DISTINCT W.FIRST_NAME, T.WORKER_TITLE
-FROM Worker W
-INNER JOIN Title T
-ON W.WORKER_ID = T.WORKER_REF_ID
-AND T.WORKER_TITLE in ('Manager');
+---
+## Practice
+- Free practice problems: [https://leetcode.com/studyplan/top-sql-50/](https://leetcode.com/studyplan/top-sql-50/) 
+- See [this repo](https://github.com/mrinal1704/SQL-Leetcode-Challenge/tree/master/Hard) for all Hard level questions on Leetcode
+- Check out Hackerrank and [Mode Analytics](https://mode.com/sql-tutorial/sql-window-functions/) too. 
