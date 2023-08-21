@@ -12,3 +12,11 @@ Note: this set of summaries DOES NOT replace actually reading through textbooks,
 - [A/B Testing](AB_Testing.md)
 - [Misc ML Knowledge Nuggets](ML_Knowledge_Bank.md)
 - [SQL](SQL.md)
+
+## References
+- [Cracking the PM Interview](https://a.co/d/c8l8kCG)
+- [Ace the Data Science Interview](https://a.co/d/5C7XBeA)
+- [Decode and Conquer](https://a.co/d/aLPLzv0)
+- [Trustworthy Online Controlled Experiments](https://a.co/d/0yeRKvJ)
+- [Machine Learning Yearning](https://info.deeplearning.ai/machine-learning-yearning-book)
+- [Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python](https://a.co/d/17pTiem)
