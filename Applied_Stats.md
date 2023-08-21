@@ -1,6 +1,8 @@
 # Applied Stats
 
-# Basic Concepts for Exploratory Data Analyses (EDA)
+Backbone of most DS interviews; below notes are mostly from "Practical Stats for Data Science". 
+
+## Basic Concepts for Exploratory Data Analyses (EDA)
 
 - **Robust** = not sensitive to extreme values (trimmed means and median are more robust than just simple averages)
 - “statisticians estimate, data scientists measure”
@@ -41,7 +43,7 @@
     - To compute: **Pearson’s correlation coefficient -** we multiply **deviations** from the mean for variable 1 times those for variable 2, and divide by the product of the standard deviations
     - Like the mean and standard deviation, the correlation coefficient is sensitive to outliers in the data (can use trimming to remove outliers)
 
-# Data and Sampling Distributions
+## Data and Sampling Distributions
 
 - **Sample**: a subset from a large data set (population)
     - **sampling procedure**:
@@ -108,7 +110,7 @@ $$
     - key assumption: lambda remains constant, which is rarely reasonable in a global sense (but workable when time or space is divided into segments that are sufficiently homogeneous so that analysis or simulation within those periods is valid).
 - Summary: Random selection of data can reduce bias and yield a higher quality data set than would result from just using the conveniently available data. Knowledge of various sampling and data generating distributions allows us to quantify potential errors in an estimate that might be due to random variation. At the same time, the bootstrap (sampling with replacement from an observed data set) is an attractive “one size fits all” method to determine possible error in sample estimates.
 
-# Statistical Experiments and Significance Testing
+## Statistical Experiments and Significance Testing
 
 - The goal is to design an experiment in order to confirm or reject a hypothesis
 - **inference**: reflects the intention to apply the experiment results, which involve a limited set of data, to a larger process or population.
@@ -169,7 +171,7 @@ $$
 - **Sample size**: how big of a sample you need, usually estimated from the power calculation.
 - Significance level: The statistical significance level at which the test will be conducted.
 
-# **Regression and Prediction**
+## **Regression and Prediction**
 
 - Regression: while correlation measures the strength of an association between two variables, regression quantifies the nature of the relationship.
     - Regression coefficient: The slope of the regression line.
@@ -218,7 +220,7 @@ $$
     - Generalized additive models: Spline models with automated selection of knots.
 - Summary: In classical statistics, the emphasis is on finding a good fit to the observed data **to explain or describe** some phenomenon, and the strength of this fit is how traditional (“in-sample”) metrics are used to assess the model. In data science, by contrast, the goal is typically **to predict** values for new data, so metrics based on predictive accuracy for out-of-sample data are used. Variable selection methods are used to reduce dimensionality and create more compact models.
 
-# Classification
+## Classification
 
 - **Naive bayes**: uses the probability of observing predictor values, given an outcome, to estimate the probability of observing outcome Y = i, given a set of predictor values.
     - we assume X_i is independent of all other X_k (for k =/= i)
@@ -260,7 +262,7 @@ $$
     - can achieve a similar effect by **weighting** the data. An easy way to change the loss function, discounting errors for records with low weights in favor of records with higher weights.
     - data generation, e.g. SMOTE algorithm: generates synthetic data
 
-# Statistical Machine Learning
+## Statistical Machine Learning
 
 - **K-Nearest Neighbors**: for both classification (assigning it to the class that similar records belong to, by a majority vote) and regression (average of the K-Nearest Neighbors); **unsupervised learning**
     - Similarity (nearness) is determined using a distance metric, which is a function that measures how far two records (x1, x2, ... xp) and (u1, u2, ... up) are from one another.
@@ -289,7 +291,7 @@ $$
             - **Ridge** regression minimizes the sum of squared residuals plus a penalty on the number and size of the coefficients
             - **Lasso** is similar, except that it uses Manhattan distance instead of Euclidean distance as a penalty term
 
-# **Unsupervised Learning**
+## **Unsupervised Learning**
 
 - Clustering: segmentation
 - Unsupervised learning techniques generally require that the data be appropriately **scaled**. This is different from many of the techniques for regression and classification in which scaling is not important (an exception is K-nearest neighbors).
@@ -311,7 +313,7 @@ $$
     - Each distribution has a different mean and covariance matrix
     - limitations: The methods require an underlying assumption of a model for the data, and the cluster results are very dependent on that assumption. The computations requirements are higher than even hierarchical clustering, making it difficult to scale to large data.
 
-# Causal Inference
+## Causal Inference
 
 - Neyman-Rubin Causal Model: [https://scholar.princeton.edu/sites/default/files/jmummolo/files/po_model_jm.pdf](https://scholar.princeton.edu/sites/default/files/jmummolo/files/po_model_jm.pdf)
     - Fundamental Problem of Causal Inference: We cannot observe both potential outcomes. So how can we calculate τi = Y1i − Y0i?
