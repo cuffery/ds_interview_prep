@@ -1,16 +1,10 @@
 # Product Sense
+This is the meat of any product Data Science interviews - acing it, and you have a good chance at an offer. Questions usally come in the form of "Measure of success", “Favorite Product/Feature” and “How do you make it better”, and “New feature to build” (which usually involves tradeoff discussions among a few potential ideas and options).
 
-Measure of success
+Below are some notes and tips collected from various books, most notably "Cracking the PM interview". 
 
-“Favorite Product/Feature” and “How do you make it better” 
-
-“New feature to build” 
-
-- Google workplace - facing large enterprises, self-hosted option + more security and access controls and guarantees
-
-# Product Intuition
-
-## **Type 1: Designing a Product**
+## Product Intuition
+### **Type 1: Designing a Product**
 
 *Step 1: Ask questions to understand the problem*
 
@@ -36,7 +30,7 @@ Measure of success
 
 *Step 7: Wrap things up*
 
-## **Type 2: Improving a Product**
+### **Type 2: Improving a Product**
 
 These questions can be asked in general terms (“Pick a product. How would you improve it?”) or by targeting a specific product (“How would you improve Product X?”). Either way, the secret to these questions is identifying and understanding the product’s biggest issues.
 
@@ -69,7 +63,7 @@ If it’s not immediately obvious, discuss with your interviewer how you would i
 
 what metrics you would gather to see if your solution really worked.
 
-## **Type 3: Favorite Product**
+### **Type 3: Favorite Product**
 
 These problems are similar to “improve a product,” but approached in reverse. Rather than speaking about what’s broken about a product, you discuss why you love this product.
 
@@ -95,6 +89,7 @@ Every product has its alternatives, even ones that are seemingly first to market
 You don’t necessarily have to go into this immediately, but it’s a natural follow-up question the interviewer might ask.
 
 ## **Product Metrics**
+Time to whip out your funnel and rattle off these metrics as you see fit. 
 
 **Users / Traffic:** How many users does the product have? How are they acquiring users? Which channels are the most effective in getting users? How (and why) has the user base grown overtime? How many active users are there? How do we define what an active user is?
 
@@ -115,7 +110,7 @@ frequently visit. What is the churn rate? What is the conversion rate (free to p
 **Costs:** Where does the product face costs? Does it require physical materials? What are its
 development costs? Does it face high support or sales costs? What is the customer acquisition cost? How much does supporting a customer cost?
 
-## **Tips and Tricks**
+## **Misc. Tips and Tricks**
 
 Ultimately, these design questions are getting at how well you can show user **empathy**. Can you get inside the user’s head and think about what that type of user would want? Or will you just design the product you will want? Focusing on the user is key.
 
@@ -153,9 +148,7 @@ issues your idea has. If she doesn’t, then you’ll actually impress her by po
 she wasn’t aware of.
 
 ## Case Questions
-
-Interviewers are looking for candidates who will do the following:
-
+Pretty similar to consulting interviews; interviewers are looking for candidates who will do the following:
 - **Structure a problem:** Even seemingly open-ended questions can, and should be, broken down into components. Your market can be segmented and your strategy can be divided. Find a way to tackle a problem in a structured way.
 - **Show strong instincts:** We rarely have all the data we’d like, and we don’t know what the
 future will hold. A good PM should be able to make good business decisions, even in the
@@ -163,35 +156,13 @@ absence of exhaustive data.
 - **Drive, Not Ride:** You might not be the CEO of the product, but you are a leader. Show this by
 driving the interview forward. Be relatively exhaustive in your response to a question – **discuss the benefits and tradeoffs**, **the short-term and long-term benefits**, etc. – and back up your answers with reasons. Don’t go overboard, though. If you find your interviewer is asking many follow-up questions and you’re only giving short responses each time, you might be riding and not driving. On the other hand, if you’re concerned you’re going into too much detail, ask your interviewer if he’d like you to expand.
 
-# Metric Sense
+## Metric Sense
+Another big part of Product DS interview. Usually you will need to answer questions like:
+- **Diagnose metric movement**: why did my X metric drop Y% this week?
+- **How would you measure the success of XYZ?** e.g. Facebook Stories; Google Drive; Airbnb Categories (designing A/B tests; quasi-experimental techniques)
+- **Should we launch ABC feature?** (define product success metrics, understand tradeoffs and ecosystem impact)
 
-Diagnose metric movement 
-
-How would you measure the success of XYZ? (designing A/B tests; quasi-experimental techniques)
-
-Should we launch ABC feature? (define product metrics, brainstorm features)
-
-## Product Metrics Definition
-
-e.g. “how would you measure the success of Facebook dating”? 
-
-**Step 1: Clarity the product & Its Purpose and users**
-
-We need to start by defining the problem. This can be done by clarifying the business purpose behind the product, the product’s goal, who this feature is for, and what the user flow looks like, etc. 
-
-**Step 2: Explain the product and business goal**
-
-tie it back to company mission
-
-“to build for the future with a solution that’s **flexible, helpful, and inspires innovation**.”
-
-“to enable a hybrid work experience that enhances collaboration, strengthens human connection, and increases wellbeing for people—wherever they are and however they work.”
-
-**Step 3: Define success metrics**
-
-It is crucial to determine and measure the main actions a user needs to take in order to drive the product and business goal. [Acquisition - Activation - Engagement - Retention - Revenue]
-
-## Diagnosing Metrics Change
+### Diagnosing Metrics Change
 
 **Step 1: Scope out the metric change**
 
@@ -217,45 +188,30 @@ Slice and dice. by region, age, gender, language, app version, device, platform,
 - Correlated results: factors that are symptoms of the root cause but not a contributing factor
 - unrelated factors
 
-## Assessing Metric Trade-offs
+### Product Metrics Definition
+
+e.g. “how would you measure the success of Facebook dating”? 
+
+**Step 1: Clarity the product & Its Purpose and users**
+
+We need to start by defining the problem. This can be done by clarifying the business purpose behind the product, the product’s goal, who this feature is for, and what the user flow looks like, etc. 
+
+**Step 2: Explain the product and business goal**
+
+tie it back to company mission
+
+“to build for the future with a solution that’s **flexible, helpful, and inspires innovation**.”
+
+“to enable a hybrid work experience that enhances collaboration, strengthens human connection, and increases wellbeing for people—wherever they are and however they work.”
+
+**Step 3: Define success metrics**
+
+It is crucial to determine and measure the main actions a user needs to take in order to drive the product and business goal. [Acquisition - Activation - Engagement - Retention - Revenue]
+
+
+### Assessing Metric Trade-offs
 
 1. Understand what the metrics in question actually mean
 2. Understand business and product goals
 3. Tie back to long-term gains and user experience goals
 
-G**oogle drive/workplace brainstorming**
-
-Drive product goal: allows cloud storage of important personal and business data which can be easily accessed on different platforms and shared with others to collaborate on.
-
-Workplace product goal: real time collaboration
-
-Measure of Success:
-
-- enterprise vs personal use
-- acquisition: # of accounts sold, # of users who opened Drive/Workplace once
-- activation: # of users who used core features like uploading, downloading, sharing, creating docs; # of items uploaded/shared/created; frequency of usage; # of products used; # of users who use it on multiple platforms
-- retention: Daily active over monthly active; month-over-month churn;
-- monetization: sales revenue; cloud storage cost;
-- ecosystem impact: # of mails with google drive attachment; # of users who only use drive with their gmail accounts;
-
-Favorite product: Google Doc
-
-like it for its real time collab feature, an essential tool for my remote work and my distributed team; love thoughtful touches - e.g. hovering over a person’s name will show me their title and team (for extra context), can show doc title instead of long URLs and show deck/doc previews, integrates well with Google Sheet (can update data in real time); love the app marketplace where i can try more interesting apps and tools (like Code Blocks, LucidChart)
-
-how to improve? We need to tackle this question in a principled way:
-
-- further its mission
-- address biggest user pain points
-- eye for growth
-
-to further its mission and strength of real-time collaboration, we can consider adding: (1) tighter whiteboard integration (jamboard, miro); (2) live huddle feature (audio room) especially when organizations don’t use Google Meet;
-
-(3) video snippets (Loom) especially if it’s something easier explained by video/live; more ideas can come from app store reviews, user research via focus group or surveys, and taking a look at the Add-on marketplace for popular add-ons.
-
-(think about different customer segments) for me, someone in the tech/data field who uses google doc for design doc writing and sharing and reviews, it’s important to have features that best enhance what we usually put on paper: math symbols, formula, code snippets, graphs. And do them inline. Better formatting tool + tighter whiteboard integration + enhancing context (snippets)
-
-For PMs, it might be better formatting functionality that formats block quotes (customer testimonials), incorporates polling, and faster and more intuitive
-
-To address user pain points, it sometimes might be due to missing features, but could also be due to performance issues (slowness/crashes), reliability and availability, or unintuitive UX designs. Important to tease out what they are via targeted user research (talk to people who churned or had a decrease in engagement, especially the personal account users as they are not forced to use it for work probably). (Can get a sense if users today are hacking around to achieve what they need: screenshot formulas and insert as imagines; inserting frames from jamboard/miro)
-
-Lastly, to consider how to improve also usually implies we want to grow. Then it’s important to get a sense of current user distributions and penetration via total addressable markets, by different segments: geography, demographics (for personal), business verticals,business sizes, etc.
