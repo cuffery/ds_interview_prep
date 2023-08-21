@@ -8,3 +8,6 @@ Hello, welcome to my collection of Data Science Interview Prep Materials! This s
 ## Table of Content
 - [Product Sense](Product_Sense.md)
 - [Basic Stats Concepts](Applied_Stats.md)
+- [A/B Testing](AB_Testing.md)
+- [Misc ML Knowledge Nuggets](ML_Knowledge_Bank.md)
+- [SQL](SQL.md)
